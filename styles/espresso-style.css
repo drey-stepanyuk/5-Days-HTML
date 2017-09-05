@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Chewy|Raleway');
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+/*==============================================================================
+HEADER
+==============================================================================*/
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://unsplash.it/4000/2667?image=885');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header > h1 {
+  font-family: 'Chewy', sans-serif;
+  font-size: 7rem;
+  color: #fff;
+  text-shadow: 5px 5px 1px #5d4116;
+}
+
+/*==============================================================================
+SUB HEADER
+==============================================================================*/
+
+.sub-header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+/*==============================================================================
+LEFT BLOCK
+==============================================================================*/
+
+.left {
+  width: 50%;
+  background-color: #5d4116;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  border: 5px solid #fff;
+  border-bottom-right-radius: 100px;
+}
+
+#left-title {
+  width: 80%;
+  text-align: center;
+  font-family: 'Chewy', sans-serif;
+  font-size: 2rem;
+  color: #5d4116;
+  background-color: #fff;
+  margin-top: 2rem;
+  border-radius: 50px;
+  box-shadow:
+    5px 10px 0 #99D5C9,
+    10px 20px 0 #C1AE7C,
+    15px 30px 0 #628880;
+}
+
+#coffee-cup {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+#coffee-cup-svg {
+  height: 30rem;
+  width: 30rem;
+}
+
+#coffee-cup-base {
+  fill: #628880;
+}
+
+#coffee-steam-l, #coffee-steam-s {
+  fill: #C1AE7C;
+  animation: wiggle 2s linear infinite;
+}
+
+/*==============================================================================
+RIGHT BLOCK
+==============================================================================*/
+
+.right {
+  width: 50%;
+  background-color: #fff;
+  display: flex;
+  color: #5d4116;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 5px solid #5d4116;
+  border-bottom-left-radius: 100px;
+}
+
+#coffee-drop {
+  width: 80%;
+  margin-top: -5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#coffee-drop h1 {
+  font-family: 'Chewy', sans-serif;
+  font-size: 3rem;
+}
+
+#coffee-drop-svg {
+  height: 12rem;
+  width: 12rem;
+  margin-top: 2rem;
+}
+
+.coffee-drip {
+  fill: #C1AE7C;
+}
+
+#left-drop, #right-drop {
+  fill: #5d4116;
+}
+
+#left-drop {
+  animation: left-splash 3s linear infinite;
+}
+
+#right-drop {
+  animation: right-splash 3s linear 1.5s infinite;
+}
+
+#right-description {
+  width: 80%;
+  height: 20rem;
+  border: 5px dashed #5d4116;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*==============================================================================
+SPANS
+==============================================================================*/
+.sand {
+  color: #C1AE7C;
+}
+
+.light-blue {
+  color: #99D5C9;
+}
+
+.dark-blue {
+  color: #628880;
+}
+
+/*==============================================================================
+ANIMATIONS
+==============================================================================*/
+@keyframes left-splash {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-.1rem, .1rem);
+  }
+}
+
+@keyframes right-splash {
+    0%,
+    100% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(.1rem, .1rem);
+    }
+  }
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: skewX(0deg) skewY(0deg) rotate(0deg);
+  }
+  50% {
+    transform: skewX(1deg) skewY(2deg) rotate(-1deg);
+  }
+}

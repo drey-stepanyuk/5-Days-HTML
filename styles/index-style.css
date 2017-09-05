@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Creepster|Montserrat|Rock+Salt');
+
+h1, h3, p {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  margin: 0;
+  background-color: #202323;
+  color: #F7F7F7;
+}
+
+.main-container {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  border-left: 2rem solid #F7F7F7;
+  border-right: 2rem solid #F7F7F7;
+  background-color: #F7F7F7;
+}
+
+/*==============================================================================
+LOGOS
+==============================================================================*/
+
+#logo-left > img {
+  height: 10rem;
+  width: 10rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+#logo-right > img {
+  height: 10rem;
+  width: 10rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.pentagram {
+  transform-style: preserve-3d;
+  transition: all 2s ease;
+}
+
+.pentagram:hover {
+  transform: rotate(180deg);
+}
+
+/*==============================================================================
+HEADER
+==============================================================================*/
+
+#header {
+  width: 100%;
+  height: 20rem;
+  background-color: #444444;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-family: 'Creepster';
+  border-bottom-left-radius: 80px 50px;
+  border-bottom-right-radius: 80px 50px;
+}
+
+#header > h1 {
+  color: #F7F7F7;
+  font-size: 5rem;
+  padding-bottom: 2rem;
+  animation: glow 3s ease infinite;
+}
+
+#header > h3 {
+  font-size: 2rem;
+  color: #6FFFE9;
+}
+
+/*==============================================================================
+DAYS
+==============================================================================*/
+
+hr {
+  width: 40%;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #DBAFC1;
+  border-color: #DBAFC1;
+}
+
+
+.days {
+  width: 100%;
+  height: 20rem;
+  background-color: #444444;
+  margin: 0 0 2rem 0;
+  border-top-left-radius: 80px 50px;
+  border-bottom-right-radius: 80px 50px;
+}
+
+.top {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.top h3 {
+  font-family: 'Creepster';
+  color: #6FFFE9;
+  /*color: #FFA686;*/
+  font-size: 3rem;
+}
+
+.top a {
+  text-decoration: none;
+}
+
+.top a:hover {
+  animation: posessed .1s linear infinite;
+}
+
+
+.top > img {
+  height: 5rem;
+  margin-left: 2rem;
+}
+
+.bottom {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bottom > p {
+  font-size: 1.2rem;
+}
+
+/*==============================================================================
+FOOTER
+==============================================================================*/
+
+#footer {
+  width: 100%;
+  height: 10rem;
+  background-color: #444444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Creepster', sans-serif;
+}
+
+#footer > h3 {
+  font-size: 2.5rem;
+  animation: glow 3s ease infinite;
+}
+
+/*==============================================================================
+ANIMATIONS
+==============================================================================*/
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0px 0px 1px #6FFFE9;
+  }
+  50% {
+    text-shadow: 0px 0px 15px #6FFFE9;
+  }
+}
+
+@keyframes posessed {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    filter: invert(100%);
+    transform: rotate(5deg);
+  }
+}
+
+
+/*==============================================================================
+MEDIA QUERIES
+==============================================================================*/
+@media (max-width: 1610px) {
+  #logo-left, #logo-right {
+    display: none;
+  }
+}
