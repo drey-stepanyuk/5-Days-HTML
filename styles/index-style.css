@@ -58,6 +58,14 @@ LOGOS
   transform: rotate(180deg);
 }
 
+#final-star {
+  opacity: 0;
+}
+
+#final-star:hover {
+  opacity: 1;
+}
+
 /*==============================================================================
 HEADER
 ==============================================================================*/
@@ -130,6 +138,7 @@ hr {
   color: #6FFFE9;
   /*color: #FFA686;*/
   font-size: 3rem;
+  margin-right: 5rem;
 }
 
 .top a {
@@ -143,7 +152,8 @@ hr {
 
 .top > img {
   height: 5rem;
-  margin-left: 2rem;
+  margin-left: 5rem;
+  position: absolute;
 }
 
 .bottom {

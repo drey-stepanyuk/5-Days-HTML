@@ -1,50 +1,53 @@
 @import url('https://fonts.googleapis.com/css?family=Sue+Ellen+Francisco');
 
 body {
-  background-color: #3C153B;
-  margin: 0;
+    background-color: #3C153B;
+    margin: 0;
 }
 
 /*==============================================================================
 HEADER
 ==============================================================================*/
+
 #header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Sue Ellen Francisco', sans-serif;
-  color: #78C0E0;
-  font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sue Ellen Francisco', sans-serif;
+    color: #78C0E0;
+    font-size: 2rem;
+    text-align: center;
 }
 
 #warning {
-  display: none;
+    display: none;
 }
 
 /*==============================================================================
 FOOTER
 ==============================================================================*/
+
 footer {
-  width: 100%;
-  height: 7vh;
-  background-color: #462255;
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
+    width: 100%;
+    height: 7vh;
+    background-color: #462255;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-icons i {
-  font-size: 1.3rem;
-  color: #78C0E0;
+    font-size: 1.3rem;
+    color: #78C0E0;
 }
 
 .footer-icons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
 }
 
 /*==============================================================================
@@ -52,24 +55,26 @@ PLUS BUTTON
 ==============================================================================*/
 
 #svg-button {
-  display: flex;
-  justify-content: center;
-  z-index: 1;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
 }
 
 #svg-button > svg {
-  margin-top: -1rem;
+    margin-top: -1rem;
 }
 
 #svg-button i {
-  position: absolute;
-  padding-top: .2rem;
-  font-size: 2.5rem;
-  color: #3C153B;
+    position: absolute;
+    padding-top: .2rem;
+    font-size: 2.5rem;
+    color: #3C153B;
 }
 
 #plus-icon {
-  transition: all .8s cubic-bezier(0.68, 0.38, 0.25, 2.13);
+    transition: all .8s cubic-bezier(0.68, 0.38, 0.25, 2.13);
+    -webkit-transition: all .8s cubic-bezier(0.68, 0.38, 0.25, 2.13);
+    -moz-transition: all .8s cubic-bezier(0.68, 0.38, 0.25, 2.13);
 }
 
 /*==============================================================================
@@ -77,51 +82,55 @@ HIDDEN BUBBLES
 ==============================================================================*/
 
 .bubble {
-  position: absolute;
-  transition: all .4s cubic-bezier(0.42, 0, 0.58, 1.77);
-  z-index: -1;
+    position: absolute;
+    transition: all .4s cubic-bezier(0.42, 0, 0.58, 1.77);
+    -webkit-transition: all .4s cubic-bezier(0.68, 0.38, 0.25, 2.13);
+    -moz-transition: all .4s cubic-bezier(0.68, 0.38, 0.25, 2.13);
+    z-index: -1;
+    transform: translate(0, 0);
 }
 
 .bubble i {
-  position: absolute;
-  margin-top: -4.2rem;
-  margin-left: 2.5rem;
-  font-size: 1.7rem;
-  color: #3C153B;
+    position: absolute;
+    margin-top: -4.2rem;
+    margin-left: 2.5rem;
+    font-size: 1.7rem;
+    color: #3C153B;
 }
 
 #diamond {
-  margin-left: 2.2rem;
+    margin-left: 2.2rem;
 }
 
-#dash {
-  margin-left: 2.4rem;
-  margin-top: -4.3rem;
+#plane {
+    margin-left: 2.5rem;
+    margin-top: -4.1rem;
 }
 
 #bubble-two {
-  transition-delay: .1s;
+    transition-delay: .1s;
 }
 
 #bubble-three {
-  transition-delay: .2s;
+    transition-delay: .2s;
 }
 
 /*==============================================================================
 MEDIA BREAKS
 ==============================================================================*/
+
 @media screen and (min-width: 420px) {
-  body {
-    background-color: #fff;
-  }
+    body {
+        background-color: #fff;
+    }
 
-  .main-container {
-    display: none;
-  }
+    .main-container {
+        display: none;
+    }
 
-  #warning {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    #warning {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }

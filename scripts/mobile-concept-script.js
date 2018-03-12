@@ -1,50 +1,45 @@
-window.onload = function() {
-  document.getElementById('plus-icon').onclick = function() {
-    toggleMenu();
-  }
-
-  function toggleMenu() {
-    toggleBubbleOne();
-    toggleBubbleTwo();
-    toggleBubbleThree();
-
+window.onload = function () {
     var plus = document.getElementById('plus-icon');
-
-    if(plus.style.transform != 'rotate(45deg)') {
-      plus.style.transform = 'rotate(45deg)';
-    } else {
-      plus.style.transform = 'rotate(0deg)';
+    plus.onclick = function () {
+        toggleMenu();
+        toggleBubbles();
     }
-  }
 
-  function toggleBubbleOne() {
-    var bubbleOne = document.getElementById('bubble-one');
-
-    if(bubbleOne.style.transform != 'translate(-6rem, -6rem)') {
-      bubbleOne.style.transform = 'translate(-6rem, -6rem)';
-    } else {
-      bubbleOne.style.transform = 'translate(0rem, 0rem)';
+    function toggleMenu() {
+        if (plus.style.transform != 'rotate(45deg)') {
+            plus.style.transform = 'rotate(45deg)';
+        } else {
+            plus.style.transform = 'rotate(0deg)';
+        }
     }
-  }
 
-  function toggleBubbleTwo() {
-    var bubbleTwo = document.getElementById('bubble-two');
+    function toggleBubbles() {
+        var bubbles = document.querySelectorAll('.bubble');
 
-    if(bubbleTwo.style.transform != 'translateY(-8rem)') {
-      bubbleTwo.style.transform = 'translateY(-8rem)';
-    } else {
-      bubbleTwo.style.transform = 'translateY(0rem)';
+        bubbles.forEach(function (bubble) {
+            var defaultAtr = 'translate(0, 0)';
+
+            if (bubble == bubbles[0]) {
+                if (bubble.style.transform != 'translate(-6rem, -6rem)') {
+                    bubble.style.transform = 'translate(-6rem, -6rem)';
+                } else {
+                    bubble.style.transform = defaultAtr;
+                }
+            } else if (bubble == bubbles[1]) {
+                if (bubble.style.transform != 'translateY(-8rem)') {
+                    bubble.style.transform = 'translateY(-8rem)'
+                } else {
+                    bubble.style.transform = defaultAtr;
+                }
+            } else if (bubble == bubbles[2]) {
+                if (bubble.style.transform != 'translate(6rem, -6rem)') {
+                    bubble.style.transform = 'translate(6rem, -6rem)';
+                } else {
+                    bubble.style.transform = defaultAtr;
+                }
+            }
+
+        });
     }
-  }
-
-  function toggleBubbleThree() {
-    var bubbleThree = document.getElementById('bubble-three');
-
-    if(bubbleThree.style.transform != 'translate(6rem, -6rem)') {
-      bubbleThree.style.transform = 'translate(6rem, -6rem)';
-    } else {
-      bubbleThree.style.transform = 'translate(0rem, 0rem)';
-    }
-  }
 
 };
